@@ -5,6 +5,7 @@ const API_BASE = (() => {
   if (requested) return requested.replace(/\/$/, '');
   const local = ['localhost', '127.0.0.1'].includes(location.hostname);
   if (local && location.port && location.port !== '8787') return 'http://127.0.0.1:8787';
+  if (location.hostname.endsWith('vercel.app') || location.hostname.endsWith('aporiarealms.com')) return 'https://api.aporiarealms.com';
   return '';
 })();
 

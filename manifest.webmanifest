@@ -1,0 +1,19 @@
+{
+  "name": "Aporia Realms",
+  "short_name": "Realms",
+  "description": "Persistent worlds that remember what actually happened.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#090b10",
+  "theme_color": "#090b10",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/icons/realm-mark.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

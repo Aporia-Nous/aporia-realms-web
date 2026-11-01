@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Aporia Realms">
+  <rect width="512" height="512" rx="112" fill="#090b10"/>
+  <circle cx="256" cy="256" r="174" fill="none" stroke="#c8aa6e" stroke-width="18"/>
+  <path d="M256 106 372 384h-51l-27-68h-77l-26 68h-51L256 106Zm0 102-26 65h52l-26-65Z" fill="#f3ead9"/>
+  <path d="M104 256h63M345 256h63" stroke="#7b2229" stroke-width="14" stroke-linecap="round"/>
+</svg>

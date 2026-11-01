@@ -1,0 +1,16 @@
+{
+  "name": "Aporia Realms",
+  "short_name": "AporiaRealms",
+  "description": "Authoritative world engine and immersive RPG player client",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#080a0f",
+  "theme_color": "#080a0f",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+/* Aporia Realms: shared visual language for marketing and the player client. */
+:root {
+  --bg: #0a0c10;
+  --bg-deep: #07090d;
+  --panel: #11151b;
+  --panel-2: #171c23;
+  --panel-3: #1c232a;
+  --text: #eee5d4;
+  --muted: #b4b0a7;
+  --dim: #a09c94;
+  --gold: #d6b77a;
+  --gold-bright: #ebce95;
+  --line: #d6b77a26;
+  --line-strong: #d6b77a66;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --story-width: 760px;
+  --realm-story-font: Georgia, 'Times New Roman', serif;
+}
+body {
+  background: radial-gradient(ellipse at 85% 0, #d6b77a09, transparent 45rem), var(--bg);
+  color: var(--text);
+}
+h1, h2, h3, .hero-main h1, .panel-title h1, .location-art h1 {
+  font-family: var(--realm-story-font);
+  font-weight: 400;
+  letter-spacing: -.025em;
+}
+.eyebrow, .section-kicker {
+  color: var(--gold);
+  letter-spacing: .2em;
+  font-size: .68rem;
+}
+.btn, .icon-btn, .composer, .choice, .toggle, .context-card,
+.surface-card, .journal-item, .location-row, .hp-card, .stat,
+.action-card, .moment-card, .panel {
+  border-radius: var(--radius-sm);
+}
+.btn {
+  min-height: 44px;
+  transition: background .16s ease, border-color .16s ease;
+}
+.btn.primary, .btn.primary:hover:not(:disabled) {
+  background: var(--gold);
+  color: #171611;
+  border-color: var(--gold-bright);
+}
+.btn.primary:hover:not(:disabled) {
+  background: var(--gold-bright);
+}
+button:focus-visible, a:focus-visible, input:focus-visible,
+select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--gold-bright);
+  outline-offset: 4px;
+}
+.topbar, .site-nav {
+  border-bottom: 1px solid var(--line);
+  background: #0a0c10f2;
+}
+.hero-main, .hero-side, .campaign-card, .location-hero, .world-art {
+  border-color: var(--line);
+  border-radius: var(--radius);
+}
+.hero-main {
+  background: radial-gradient(ellipse at 85% 20%, #8f907c30, transparent 65%),
+    linear-gradient(120deg, #0a0c10, #1b2228);
+}
+.hero-main p, .section-lead, .lead, .world-art-copy p {
+  font-family: var(--realm-story-font);
+  line-height: 1.85;
+  color: var(--muted);
+}
+.story-feed { gap: 1.3rem; }
+.story-entry.narration {
+  background: transparent;
+  border: 0;
+  padding: 1rem .25rem;
+  font-family: var(--realm-story-font);
+  font-size: 1.16em;
+  line-height: 1.95;
+  color: var(--text);
+}
+.story-entry.dialogue {
+  background: transparent;
+  border: 0;
+  border-left: 1px solid var(--gold);
+  border-radius: 0;
+  padding-left: 1.6rem;
+}
+.story-entry.player {
+  background: #d6b77a08;
+  border-color: var(--line);
+}
+.story-entry.chapter { letter-spacing: .22em; }
+.context-card, .journal-item, .surface-card {
+  background: linear-gradient(135deg, #d6b77a05, transparent), var(--panel);
+  border-color: var(--line);
+}
+.context-card strong, .journal-item strong, .surface-card h3 {
+  font-family: var(--realm-story-font);
+  font-weight: 400;
+}
+.nav-btn, .suggestion, .pill { border-radius: 6px; }
+.nav-btn.active {
+  background: #d6b77a0c;
+  box-shadow: inset 2px 0 var(--gold);
+  color: var(--gold-bright);
+}
+.composer {
+  background: #11151bf5;
+  border-color: var(--line-strong);
+}
+.composer textarea {
+  font-family: var(--realm-story-font);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+.composer textarea:focus-visible {
+  outline: 2px solid var(--gold-bright);
+  outline-offset: 1px;
+}
+.location-art p { font-family: var(--realm-story-font); }
+.journal-item { padding: 1.25rem; }
+.tabs .tab.active { color: var(--gold-bright); }
+.map-board { border-radius: var(--radius); }
+@media (max-width: 700px) {
+  .story-entry.narration { font-size: 1.08em; line-height: 1.85; }
+  .story-entry.dialogue { padding-left: 1rem; }
+  .composer textarea { font-size: 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

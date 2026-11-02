@@ -1,58 +1,58 @@
 (() => {
   const COPY = new Map([
     ['Your persistent worlds', 'Your worlds'],
-    ['The world remembers', 'Your choices stay made'],
-    ['Play without rails.', 'Say it. Try it. Live with what happens.'],
-    ['Say what you want to do. The World Engine resolves what actually happens, commits it to the campaign, and only then lets the narrator tell the story.', 'You are not picking from a menu. Speak, act, bluff, fight, investigate, walk away, or try something the story never expected. The world reacts, remembers, and keeps going.'],
-    ['Start a new realm', 'Start a new world'],
-    ['Your library', 'Your worlds'],
-    ['Continue where the world left off.', 'Pick up exactly where you left it.'],
-    ['Your first campaign starts here.', 'Make a character and step in.'],
-    ['Every campaign resumes from its committed world state.', 'Nothing resets just because you closed the game. Your choices, consequences, and discoveries are still there.'],
-    ['Restore any campaign without losing its state.', 'Bring a world back exactly as you left it.'],
-    ['Create a hero. Enter the world.', 'Create someone. Then see what the world does with them.'],
-    ['Choose a world', 'Choose where you want to begin'],
-    ['Worlds define the people, places, truths and rules your campaign begins with.', 'Each world has its own people, dangers, history, rules, and things it is not going to tell you yet.'],
-    ['How do you want to play?', 'How should the world tell your story?'],
-    ['The same canonical world can be presented as tabletop adventure, narrative story, or long-form book.', 'The world stays the same. You choose how close the experience feels to a game, a story, or a novel.'],
-    ['Choose who enters the world', 'Who are you sending in?'],
-    ['Set the way the story meets you', 'Make it feel right'],
-    ['These settings can be changed inside the campaign at any time.', 'You can change these later without changing what happened in the world.'],
+    ['The world remembers', 'Aporia Realms'],
+    ['Play without rails.', 'Play your way.'],
+    ['Say what you want to do. The World Engine resolves what actually happens, commits it to the campaign, and only then lets the narrator tell the story.', 'Type what you want your character to do or say. You are not limited to a list of choices, and the world remembers what happens.'],
+    ['Start a new realm', 'Start a new campaign'],
+    ['Your library', 'Your campaigns'],
+    ['Continue where the world left off.', 'Continue a campaign.'],
+    ['Your first campaign starts here.', 'Start your first campaign.'],
+    ['Every campaign resumes from its committed world state.', 'Your progress, choices, and discoveries are saved with each campaign.'],
+    ['Restore any campaign without losing its state.', 'Restore a campaign and continue where you left off.'],
+    ['Create a hero. Enter the world.', 'Create a character and start playing.'],
+    ['Choose a world', 'Choose a world'],
+    ['Worlds define the people, places, truths and rules your campaign begins with.', 'Each world has its own setting, characters, history, and rules.'],
+    ['How do you want to play?', 'Choose a play style'],
+    ['The same canonical world can be presented as tabletop adventure, narrative story, or long-form book.', 'Choose whether you want the experience to feel more like a tabletop game, a story, or a book.'],
+    ['Choose who enters the world', 'Choose your character'],
+    ['Set the way the story meets you', 'Preferences'],
+    ['These settings can be changed inside the campaign at any time.', 'You can change these settings later.'],
     ['Read the story aloud', 'Voice playback'],
-    ['Show voice controls for committed narration and dialogue.', 'Add a Listen button to narration and spoken dialogue.'],
-    ['Automatically voice new narration', 'Speak new scenes automatically'],
-    ['Play new committed story lines after each turn.', 'Play narration and dialogue as soon as the world answers.'],
-    ['Build your doorway in.', 'Set the world. Set the character. Go.'],
-    ['You can change presentation settings later. The world itself remains authoritative.', 'You can change how the story is presented later. What happens in the world stays happened.'],
-    ['No one else is visible.', 'No one else is in sight.'],
-    ['Write naturally. Speak, act, inspect, fight, bargain, lie, run, or try anything.', 'Type what you actually want to do. No command syntax.'],
-    ['Only discovered truths are shown here. Unknown places and relationships remain unknown.', 'This only shows what your character has actually learned. The rest stays hidden until you find it.'],
-    ['What the campaign remembers.', 'What you have learned so far'],
-    ["This is player-visible history, not the world's hidden state.", 'People, places, decisions, and events your character has actually encountered.'],
-    ['The journal fills as the world becomes known.', 'It fills in as you discover the world.'],
+    ['Show voice controls for committed narration and dialogue.', 'Show a Listen button on narration and dialogue.'],
+    ['Automatically voice new narration', 'Play new narration automatically'],
+    ['Play new committed story lines after each turn.', 'Automatically play narration and dialogue after each turn.'],
+    ['Build your doorway in.', 'Create a campaign'],
+    ['You can change presentation settings later. The world itself remains authoritative.', 'Choose your world, play style, character, and preferences. You can change presentation settings later.'],
+    ['No one else is visible.', 'No one else is here.'],
+    ['Write naturally. Speak, act, inspect, fight, bargain, lie, run, or try anything.', 'Just type what you want to do or say.'],
+    ['Only discovered truths are shown here. Unknown places and relationships remain unknown.', 'This page only shows places, people, and information your character has discovered.'],
+    ['What the campaign remembers.', 'Journal'],
+    ["This is player-visible history, not the world's hidden state.", 'Your journal keeps track of what your character has learned and experienced.'],
+    ['The journal fills as the world becomes known.', 'New entries appear as you discover more.'],
     ['Campaign controls', 'Campaign settings'],
-    ['Presentation can change. Canonical world state cannot be rewritten by these controls.', 'Change how the experience looks and sounds. These settings never rewrite what already happened.'],
+    ['Presentation can change. Canonical world state cannot be rewritten by these controls.', 'Change how the campaign looks and sounds. These settings do not change your progress.'],
     ['Kokoro is ready', 'Voice is ready'],
-    ['Voice is currently unavailable', 'Voice is offline right now'],
+    ['Voice is currently unavailable', 'Voice is unavailable right now'],
     ['Read aloud controls', 'Show Listen buttons'],
-    ['Show voice playback on story entries.', 'Add voice playback to narration and dialogue.'],
+    ['Show voice playback on story entries.', 'Show voice playback on narration and dialogue.'],
     ['Automatic narration', 'Automatic voice'],
-    ['Speak new committed narration after a turn.', 'Play new narration and dialogue after each turn.'],
-    ['Campaign data', 'Save data'],
+    ['Speak new committed narration after a turn.', 'Play narration and dialogue automatically after each turn.'],
+    ['Campaign data', 'Campaign data'],
     ['Export player record', 'Export campaign'],
-    ['Deleting a campaign removes its persisted save file from this server.', 'Deleting this campaign permanently removes its saved world from this server.'],
+    ['Deleting a campaign removes its persisted save file from this server.', 'Deleting this campaign permanently removes its saved data.'],
     ['World Engine unavailable', 'Aporia Realms is unavailable'],
-    ['The gate did not open.', 'The world could not load.'],
-    ['Waking the world…', 'Loading your worlds…'],
-    ['Canonical state refreshed.', 'World state refreshed.'],
-    ['The turn committed, but narration failed. Reloading canonical state.', 'Your action happened, but the story response did not finish loading. Refreshing the world now.']
+    ['The gate did not open.', 'The game could not load.'],
+    ['Waking the world…', 'Loading…'],
+    ['Canonical state refreshed.', 'Campaign refreshed.'],
+    ['The turn committed, but narration failed. Reloading canonical state.', 'Your action was saved, but the response did not finish loading. Refreshing the campaign.']
   ]);
 
   const ATTR_COPY = {
     'What do you do or say?': 'What do you do?',
     'Notes only you can see in the character sheet.': 'Private notes for this character.',
-    'Appearance, temperament, history, whatever matters to you.': 'Who are they? What should the world know about them?',
-    'A goal gives the world something meaningful to push against.': 'What are they trying to accomplish?'
+    'Appearance, temperament, history, whatever matters to you.': 'Describe your character.',
+    'A goal gives the world something meaningful to push against.': 'What does your character want?'
   };
 
   let activeEntryId = null;
@@ -79,8 +79,8 @@
       const speaking = entryId === activeEntryId;
       const loading = entryId === requestEntryId;
       const pressed = speaking ? 'true' : 'false';
-      const label = loading ? 'Preparing voice…' : speaking ? '■ Stop' : '▶ Listen';
-      const title = speaking ? 'Stop voice playback' : 'Play this line aloud';
+      const label = loading ? 'Loading voice…' : speaking ? '■ Stop' : '▶ Listen';
+      const title = speaking ? 'Stop playback' : 'Listen';
       button.classList.toggle('is-speaking', speaking);
       button.classList.toggle('is-loading', loading);
       if (button.getAttribute('aria-pressed') !== pressed) button.setAttribute('aria-pressed', pressed);

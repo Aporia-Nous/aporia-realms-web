@@ -76,11 +76,16 @@
 
     root.querySelectorAll?.('[data-action="speak-entry"]').forEach((button) => {
       const entryId = button.dataset.entry;
-      button.classList.toggle('is-speaking', entryId === activeEntryId);
-      button.classList.toggle('is-loading', entryId === requestEntryId);
-      button.setAttribute('aria-pressed', entryId === activeEntryId ? 'true' : 'false');
-      button.textContent = entryId === requestEntryId ? 'Preparing voice…' : entryId === activeEntryId ? '■ Stop' : '▶ Listen';
-      button.title = entryId === activeEntryId ? 'Stop voice playback' : 'Play this line aloud';
+      const speaking = entryId === activeEntryId;
+      const loading = entryId === requestEntryId;
+      const pressed = speaking ? 'true' : 'false';
+      const label = loading ? 'Preparing voice…' : speaking ? '■ Stop' : '▶ Listen';
+      const title = speaking ? 'Stop voice playback' : 'Play this line aloud';
+      button.classList.toggle('is-speaking', speaking);
+      button.classList.toggle('is-loading', loading);
+      if (button.getAttribute('aria-pressed') !== pressed) button.setAttribute('aria-pressed', pressed);
+      if (button.textContent !== label) button.textContent = label;
+      if (button.title !== title) button.title = title;
     });
   };
 

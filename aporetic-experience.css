@@ -1,0 +1,32 @@
+.read-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  min-height: 32px;
+  padding: .35rem .65rem;
+  border: 1px solid color-mix(in srgb, var(--gold-bright) 28%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--gold-bright) 7%, transparent);
+  color: var(--muted);
+  transition: border-color .16s ease, color .16s ease, background .16s ease, transform .16s ease;
+}
+.read-btn:hover {
+  color: var(--gold-bright);
+  border-color: color-mix(in srgb, var(--gold-bright) 58%, transparent);
+  background: color-mix(in srgb, var(--gold-bright) 11%, transparent);
+}
+.read-btn:active { transform: translateY(1px); }
+.read-btn.is-loading {
+  cursor: progress;
+  opacity: .78;
+}
+.read-btn.is-speaking {
+  color: var(--gold-bright);
+  border-color: color-mix(in srgb, var(--gold-bright) 70%, transparent);
+  background: color-mix(in srgb, var(--gold-bright) 14%, transparent);
+}
+.voice-status {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
